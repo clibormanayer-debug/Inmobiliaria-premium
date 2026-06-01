@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIBORIANS 2026 - Proyecto Premium</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+body{font-family:Segoe UI,sans-serif;background:#f4f6f9}
+.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1920');background-size:cover;display:flex;al[...]
+.hero h1{font-size:4rem;font-weight:800}
+.ticker{background:#111827;color:#facc15;padding:12px;font-weight:bold;text-align:center}
+.cardx{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 20px rgba(0,0,0,.15);height:100%}
+.cardx img{height:240px;object-fit:cover;width:100%}
+.stats{background:#111827;color:white}
+.footer{background:#020617;color:white;padding:40px;text-align:center}
+.depto{margin:3px}
+</style>
+</head>
+<body>
+
+<div class="ticker">🏠 INMOBILIARIA CLIBORIANS • PROYECTO PREMIUM 2026 • ELMER CHOQUEHUANCA CHURA • INGENIERÍA DE SISTEMAS</div>
+
+<section class="hero">
+<div>
+<h1>INMOBILIARIA CLIBORIANS</h1>
+<p class="lead">Ecosistema Inmobiliario Inteligente</p>
+<a href="#proyectos" class="btn btn-warning btn-lg">Explorar Proyectos</a>
+</div>
+</section>
+
+<section class="container py-5" id="proyectos">
+<h2 class="text-center mb-5">Proyectos Destacados</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="cardx">
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200">
+<div class="p-4">
+<h4>Casa Moderna</h4>
+<p>La Paz - Bolivia</p>
+<h5 class="text-success">$120.000</h5>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="cardx">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200">
+<div class="p-4">
+<h4>Mansión Exclusiva</h4>
+<p>Cochabamba - Bolivia</p>
+<h5 class="text-success">$300.000</h5>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="cardx">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200">
+<div class="p-4">
+<h4>Condominio CLIBOR LXD</h4>
+<p>Edificio Inteligente de 10 Pisos</p>
+<button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#clibor">Ingresar</button>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="stats py-5">
+<div class="container">
+<div class="row text-center">
+<div class="col-md-3"><h1>500+</h1><p>Propiedades Vendidas</p></div>
+<div class="col-md-3"><h1>1200+</h1><p>Clientes Satisfechos</p></div>
+<div class="col-md-3"><h1>15+</h1><p>Años de Experiencia</p></div>
+<div class="col-md-3"><h1>40</h1><p>Deptos CLIBOR LXD</p></div>
+</div>
+</div>
+</section>
+
+<div class="modal fade" id="clibor">
+<div class="modal-dialog modal-xl modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header bg-dark text-white">
+<h4>🏢 CONDOMINIO CLIBOR LXD</h4>
+<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<h5>Panel de Control de 10 Pisos</h5>
+<div id="edificio"></div>
+<div class="alert alert-info mt-4">
+Sistema preparado para integración con Google Sheets, WhatsApp y control de morosidad.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<section class="container py-5">
+<h2 class="text-center mb-4">Testimonios</h2>
+<div class="row">
+<div class="col-md-4"><div class="card p-3"><p>⭐⭐⭐⭐⭐ Excelente servicio.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><p>⭐⭐⭐⭐⭐ Muy profesional.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><p>⭐⭐⭐⭐⭐ Encontré mi hogar ideal.</p></div></div>
+</div>
+</section>
+
+<footer class="footer">
+<h3>INMOBILIARIA CLIBORIANS</h3>
+<p>Proyecto Universitario Premium 2026</p>
+<p>Elmer Choquehuanca Chura</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const c=document.getElementById('edificio');
+ if(!c) return;
+ for(let p=10;p>=1;p--){
+   let d=document.createElement('div');
+   d.className='mb-2';
+   d.innerHTML='<strong>Piso '+p+'</strong><br>';
+   for(let i=1;i<=4;i++){
+      let b=document.createElement('button');
+      b.className='btn '+((i%2==0)?'btn-success':'btn-danger')+' depto';
+      b.innerText=(p==10?'100'+i:p+'0'+i);
+      d.appendChild(b);
+   }
+   c.appendChild(d);
+ }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
