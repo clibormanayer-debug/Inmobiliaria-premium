@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIBORIANS 2026 - Proyecto Premium</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+body{font-family:Segoe UI,sans-serif;background:#f4f6f9}
+.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1920');background-size:cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
+.hero h1{font-size:4rem;font-weight:800}
+.ticker{background:#111827;color:#facc15;padding:12px;font-weight:bold;text-align:center}
+.cardx{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 20px rgba(0,0,0,.15);height:100%}
+.cardx img{height:240px;object-fit:cover;width:100%}
+.stats{background:#111827;color:white}
+.footer{background:#020617;color:white;padding:40px;text-align:center}
+.depto{margin:3px}
+
+/* NUEVO CÓDIGO */
+#edificio button{
+width:130px;
+height:50px;
+margin:5px;
+font-weight:bold;
+border-radius:10px;
+}
+
+.modal-content{
+background:#f8fafc;
+}
+
+.card{
+border:none;
+border-radius:15px;
+}
+
+.table td{
+font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<div class="ticker">🏠 INMOBILIARIA CLIBORIANS • PROYECTO PREMIUM 2026 • ELMER CHOQUEHUANCA CHURA • INGENIERÍA DE SISTEMAS</div>
+
+<section class="hero">
+<div>
+<h1>INMOBILIARIA CLIBORIANS</h1>
+<p class="lead">Ecosistema Inmobiliario Inteligente</p>
+<a href="#proyectos" class="btn btn-warning btn-lg">Explorar Proyectos</a>
+</div>
+</section>
+
+<section class="container py-5" id="proyectos">
+<h2 class="text-center mb-5">Proyectos Destacados</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="cardx">
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200">
+<div class="p-4">
+<h4>Casa Moderna</h4>
+<p>La Paz - Bolivia</p>
+<h5 class="text-success">$120.000</h5>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="cardx">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200">
+<div class="p-4">
+<h4>Mansión Exclusiva</h4>
+<p>Cochabamba - Bolivia</p>
+<h5 class="text-success">$300.000</h5>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="cardx">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200">
+<div class="p-4">
+<h4>Condominio CLIBOR LXD</h4>
+<p>Edificio Inteligente de 10 Pisos</p>
+<button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#clibor">Ingresar</button>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="stats py-5">
+<div class="container">
+<div class="row text-center">
+<div class="col-md-3"><h1>500+</h1><p>Propiedades Vendidas</p></div>
+<div class="col-md-3"><h1>1200+</h1><p>Clientes Satisfechos</p></div>
+<div class="col-md-3"><h1>15+</h1><p>Años de Experiencia</p></div>
+<div class="col-md-3"><h1>40</h1><p>Deptos CLIBOR LXD</p></div>
+</div>
+</div>
+</section>
+
+<div class="modal fade" id="clibor">
+<div class="modal-dialog modal-xl modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header bg-dark text-white">
+<h4>🏢 CONDOMINIO CLIBOR LXD</h4>
+<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<div class="row">
+
+<div class="col-lg-7">
+
+<div class="card shadow-sm">
+
+<div class="card-header">
+🏢 Vista de Departamentos
+</div>
+
+<div class="card-body">
+
+<div id="edificio"></div>
+
+</div>
+</div>
+
+</div>
+
+<div class="col-lg-5">
+
+<div class="card shadow">
+
+<div class="card-header bg-dark text-white">
+🔍 Estado de Cuenta
+</div>
+
+<div class="card-body">
+
+<h2 id="tituloDepto" class="text-primary">
+Depto 901
+</h2>
+
+<span id="estadoDepto" class="badge bg-danger">
+Con deuda
+</span>
+
+<hr>
+
+<div class="text-center">
+
+<h6>ESCANEE AQUÍ PARA PAGAR</h6>
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=CLIBOR-LXD"
+class="img-fluid">
+
+</div>
+
+<hr>
+
+<h6>PROPIETARIO</h6>
+
+<h5 id="propietario">
+Elena Gómez
+</h5>
+
+<hr>
+
+<table class="table">
+
+<tr>
+<td>Alquiler</td>
+<td>2200 Bs.</td>
+</tr>
+
+<tr>
+<td>Mantenimiento</td>
+<td>100 Bs.</td>
+</tr>
+
+<tr>
+<td>Limpieza</td>
+<td>50 Bs.</td>
+</tr>
+
+<tr>
+<td>Seguridad</td>
+<td>80 Bs.</td>
+</tr>
+
+<tr>
+<td>Agua</td>
+<td>24.32 Bs.</td>
+</tr>
+
+<tr>
+<td>Electricidad</td>
+<td>61.83 Bs.</td>
+</tr>
+
+</table>
+
+<div class="alert alert-danger text-center">
+
+<h4>
+2516.15 Bs.
+</h4>
+
+</div>
+
+<input
+type="file"
+class="form-control mb-3">
+
+<button
+class="btn btn-primary w-100 mb-3">
+
+Registrar y Validar Pago
+
+</button>
+
+<a
+href="https://wa.me/59170000000"
+class="btn btn-danger w-100">
+
+<i class="bi bi-whatsapp"></i>
+Enviar Recordatorio
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+   
+</div>
+</div>
+</div>
+
+<section class="container py-5">
+<h2 class="text-center mb-4">Testimonios</h2>
+<div class="row">
+<div class="col-md-4"><div class="card p-3"><p>⭐⭐⭐⭐⭐ Excelente servicio.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><p>⭐⭐⭐⭐⭐ Muy profesional.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><p>⭐⭐⭐⭐⭐ Encontré mi hogar ideal.</p></div></div>
+</div>
+</section>
+
+<footer class="footer">
+<h3>INMOBILIARIA CLIBORIANS</h3>
+<p>Proyecto Universitario Premium 2026</p>
+<p>Elmer Choquehuanca Chura</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+   const propietarios = {
+
+"1001":"Juan Pérez",
+"1002":"María López",
+"1003":"Carlos Silva",
+"1004":"Ana Martínez",
+
+"901":"Elena Gómez",
+"902":"Jorge Quiroga",
+"903":"Sofía Rocha",
+"904":"Raúl Mendoza",
+
+"801":"Lucía Fernández",
+"802":"Marcos Ticona",
+"803":"Ramiro Vaca",
+"804":"Gabriel Orozco",
+
+"701":"Patricia Soto",
+"702":"Daniela Alarcón",
+"703":"Hugo Benítez",
+"704":"Clara Méndez",
+
+"601":"Ricardo Flores",
+"602":"Sonia Vargas",
+"603":"Fernando Choque",
+"604":"Beatriz Gutiérrez",
+
+"501":"Mario Mamani",
+"502":"Alicia Quispe",
+"503":"Roberto Condori",
+"504":"Teresa Apaza",
+
+"401":"René Copa",
+"402":"Janet Alanoca",
+"403":"Walter Cruz",
+"404":"Rosario Tarqui",
+
+"301":"Edgar Calle",
+"302":"Martha Machaca",
+"303":"Wilson Limachi",
+"304":"Silvia Poma",
+
+"201":"Gonzalo Yana",
+"202":"Paola Canaviri",
+"203":"Víctor Hugo Flores",
+"204":"Nancy Coaquira",
+
+"101":"Javier Loza",
+"102":"Gladys Chambi",
+"103":"Oscar Tintaya",
+"104":"Miriam Catacora"
+
+};
+   
+ const c=document.getElementById('edificio');
+ if(!c) return;
+ for(let p=10;p>=1;p--){
+   let d=document.createElement('div');
+   d.className='mb-2';
+   d.innerHTML='<strong>Piso '+p+'</strong><br>';
+   for(let i=1;i<=4;i++){
+      let b=document.createElement('button');
+      b.className='btn '+((i%2==0)?'btn-success':'btn-danger')+' depto';
+      b.innerText=(p==10?'100'+i:p+'0'+i);
+
+b.onclick=function(){
+
+document.getElementById("tituloDepto")
+.innerHTML="Depto "+this.innerText;
+   document.getElementById("propietario")
+.innerHTML=propietarios[this.innerText];
+
+const estado=document.getElementById("estadoDepto");
+
+if(this.classList.contains("btn-danger")){
+
+estado.innerHTML="Con deuda";
+estado.className="badge bg-danger";
+
+}else{
+
+estado.innerHTML="Al día";
+estado.className="badge bg-success";
+
+}
+
+}
+
+d.appendChild(b);
+   }
+   c.appendChild(d);
+ }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
